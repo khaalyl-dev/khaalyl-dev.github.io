@@ -537,44 +537,44 @@ ol ul {
 }
 
 .rn-section-gap {
-  padding: 100px 0;
+  padding: 30px 0;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rn-section-gap {
-    padding: 80px 0;
+    padding: 30px 0;
   }
 }
 @media only screen and (max-width: 767px) {
   .rn-section-gap {
-    padding: 80px 0;
+    padding: 30px 0;
   }
 }
 
 .rn-section-gapBottom {
-  padding-bottom: 100px;
+  padding-bottom: 30px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rn-section-gapBottom {
-    padding-bottom: 80px;
+    padding-bottom: 30px;
   }
 }
 @media only screen and (max-width: 767px) {
   .rn-section-gapBottom {
-    padding-bottom: 80px;
+    padding-bottom: 30px;
   }
 }
 
 .rn-section-gapTop {
-  padding-top: 100px;
+  padding-top: 30px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rn-section-gapTop {
-    padding-top: 80px;
+    padding-top: 30px;
   }
 }
 @media only screen and (max-width: 767px) {
   .rn-section-gapTop {
-    padding-top: 80px;
+    padding-top: 30px;
   }
 }
 
