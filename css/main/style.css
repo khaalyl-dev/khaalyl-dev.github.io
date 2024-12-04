@@ -12944,23 +12944,23 @@ figcaption {
   border-radius: 6px;
 }
 .slide.slider-style-1 {
-  padding-top: 200px;
+  padding-top: 150px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .slide.slider-style-1 {
+  .white-version .slide .content .inner .subtitle {
     padding-top: 100px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .slide.slider-style-1 {
+  .white-version .slide .content .inner .subtitle {
     padding-top: 100px;
   }
 }
-.slide.slider-style-1.with-square-box {
+.white-version .slide .content .inner .subtitle.with-square-box {
   padding-top: 200px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .slide.slider-style-1.with-square-box {
+  .white-version .slide .content .inner .subtitle.with-square-box {
     padding-top: 150px;
   }
 }
@@ -18800,6 +18800,7 @@ body.white-version .rn-btn-ulderline {
 .white-version .slide .content .inner .subtitle {
   color: var(--color-body-white);
   font-weight: 500;
+   padding-top: 100px:
 }
 .white-version .slide .content .inner .description {
   color: var(--color-body-white);
