@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Khalil Ben Anane</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico">
+    <!-- CSS 
+    ============================================ -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/slick-theme.css">
+    <link rel="stylesheet" href="../css/aaos.css">
+    <link rel="stylesheet" href="../css/feature.css">
+    <!-- Style css -->
+    <link rel="stylesheet" href="../css/main/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        #container {
+            width: fit-content;
+            padding: 8px 8px 20px 8px;
+            margin: 50px auto;
+            background-color: #ABABAB;
+            border-radius: 4px;
+            border-top: 2px solid #FFF;
+            border-right: 2px solid #FFF;
+            border-bottom: 2px solid #C1C1C1;
+            border-left: 2px solid #C1C1C1;
+            box-shadow: -3px 3px 7px rgba(0, 0, 0, .6), inset -100px 0px 100px rgba(255, 255, 255, .5);
+        }
+
+        #display {
+            display: block;
+            margin: 15px auto;
+            height: 50px;
+            width: 190px;
+            padding: 0 10px;
+            border-radius: 4px;
+            border-top: 2px solid #C1C1C1;
+            border-right: 2px solid #C1C1C1;
+            border-bottom: 2px solid #FFF;
+            border-left: 2px solid #FFF;
+            background-color: #FFF;
+            box-shadow: inset 0px 0px 10px #030303, inset 0px -20px 1px rgba(150, 150, 150, .2);
+            font-size: 28px;
+            color: #666;
+            text-align: right;
+            font-weight: 400;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 2px;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .mathButtons {
+            margin: 2px 2px 6px 2px;
+            color: #FFF;
+            text-shadow: -1px -1px 0px #44006F;
+            background-color: #434343;
+            border-top: 2px solid #C1C1C1;
+            border-right: 2px solid #C1C1C1;
+            border-bottom: 2px solid #181818;
+            border-left: 2px solid #181818;
+            box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #2E2E2E;
+        }
+
+        .digits {
+            color: #181818;
+            text-shadow: 1px 1px 0px #FFF;
+            background-color: #EBEBEB;
+            border-top: 2px solid #FFF;
+            border-right: 2px solid #FFF;
+            border-bottom: 2px solid #C1C1C1;
+            border-left: 2px solid #C1C1C1;
+            border-radius: 4px;
+            box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #DCDCDC;
+        }
+
+        .digits:hover,
+        .mathButtons:hover,
+        #clearButton:hover {
+            background-color: #FFBA75;
+            box-shadow: 0px 0px 2px #FFBA75, inset 0px -20px 1px #FF8000;
+            border-top: 2px solid #FFF;
+            border-right: 2px solid #FFF;
+            border-bottom: 2px solid #AE5700;
+            border-left: 2px solid #AE5700;
+        }
+
+        #clearButton {
+            color: #FFF;
+            text-shadow: -1px -1px 0px #44006F;
+            background-color: #D20000;
+            border-top: 2px solid #FF8484;
+            border-right: 2px solid #FF8484;
+            border-bottom: 2px solid #800000;
+            border-left: 2px solid #800000;
+            box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #B00000;
+        }
+    </style>
+
+
+</head>
+
+<body class="template-color-1 spybody white-version" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
+
+    <!-- Start Header -->
+    <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
+        <div class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
+            <!-- Start Header Left -->
+            <div class="col-lg-2 col-6">
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="../images/logo/logo-dark.png" alt="logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Left -->
+            <!-- Start Header Center -->
+            <div class="col-lg-10 col-6">
+                <div class="header-center">
+                    <nav id="sideNav" class="mainmenu-nav navbar-example2 d-none d-xl-block onepagenav">
+                        <!-- Start Mainmanu Nav -->
+                        <ul class="primary-menu nav nav-pills">
+                            <li class="nav-item current"><a class="nav-link" href="../index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#features">Features</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#portfolio">Portfolio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#resume">Resume</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#clients">Mini Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#blog">blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#contacts">Contact</a></li>
+                        </ul>
+                        <!-- End Mainmanu Nav -->
+                    </nav>
+                    <!-- Start Header Right  -->
+                    <div class="header-right">
+                        <a class="rn-btn" target="_blank" href="https://github.com/khaalyl"><span>Github</span></a>
+                        <div class="hamberger-menu d-block d-xl-none">
+                            <i id="menuBtn" class="feather-menu humberger-menu" data-feather="align-justify"></i>
+                        </div>
+                        <div class="close-menu d-block">
+                            <span class="closeTrigger">
+                                <i data-feather="x"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- End Header Right  -->
+
+                </div>
+            </div>
+            <!-- End Header Center -->
+        </div>
+    </header>
+    <!-- End Header Area -->
+    <!-- Start Popup Mobile Menu  -->
+    <div class="popup-mobile-menu">
+        <div class="inner">
+            <div class="menu-top">
+                <div class="menu-header">
+                    <a class="logo" href="../index.html">
+                        <img src="../images/logo/logos-circle.png" alt="Personal Portfolio">
+                    </a>
+                    <div class="close-button">
+                        <button class="close-menu-activation close"><i data-feather="x"></i></button>
+                    </div>
+                </div>
+                <p class="discription">WELCOME TO MY WORLD </p>
+            </div>
+            <div class="content">
+                <ul class="primary-menu nav nav-pills onepagenav">
+                    <li class="nav-item current"><a class="nav-link smoth-animation active"
+                            href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link smoth-animation" href="../index.html#features">Features</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link smoth-animation"
+                            href="../index.html#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link smoth-animation" href="../index.html#resume">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link smoth-animation" href="../index.html#clients">Mini
+                            Projects</a></li>
+                    <li class="nav-item"><a class="nav-link smoth-animation" href="../index.html#blog">blog</a></li>
+                    <li class="nav-item"><a class="nav-link smoth-animation" href="../index.html#contacts">Contact</a>
+                    </li>
+                </ul>
+                <!-- social sharea area -->
+                <div class="social-share-style-1 mt--40">
+                    <span class="title">find with me</span>
+                    <ul class="social-share d-flex liststyle">
+                        <li class="facebook"><a href="https://www.facebook.com/khaalyl2"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-facebook">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg></a>
+                        </li>
+                        <li class="instagram"><a href="https://github.com/khaalyl"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-github">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg></a>
+                        </li>
+                        <li class="linkedin"><a href="https:/www.linkedin.com/in/khaalyl"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-linkedin">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+    </div>
+    <!-- End Popup Mobile Menu  -->
+
+
+
+
+    <main class="main-page-wrapper">
+
+        <!-- Start Slider Area -->
+        <div id="converter" class="rn-slider-area">
+            <div class="slide slider-style-1">
+                <div class="container">
+                    <div class="row row--30">
+                        <div class="order-1 order-lg-1 col-lg-7 mt_md--50 mt_sm--50 mt_lg--30">
+                            <div class="content">
+                                <div class="inner">
+                                    <span class="subtitle">ADDITION, SUBTRACT, MULTIPLIES, DIVISION </span>
+                                    <h1 class="title" style="font-size: 40px;"><span>Simple Calculator</span>
+                                    </h1>
+
+                                    This code implements a simple calculator using HTML and JavaScript. It features a user interface with buttons for digits, arithmetic operations, and a display field that shows the current input and result. The calculator performs basic arithmetic operations: addition, subtraction, multiplication, and division. Each operation is handled by dedicated functions, ensuring clear and maintainable code.
+                                    <br>
+                                    <div>
+                                        <fieldset id="container">
+                                            <form name="calculator">
+                                                <input id="display" type="text" name="display" readonly>
+
+                                                <input class="button digits" type="button" value="7"
+                                                    onclick="concatener('7')">
+                                                <input class="button digits" type="button" value="8"
+                                                    onclick="concatener('8')">
+                                                <input class="button digits" type="button" value="9"
+                                                    onclick="concatener('9')">
+                                                <input class="button mathButtons" type="button" value="+"
+                                                    onclick="concatener(' + ')">
+                                                <br>
+                                                <input class="button digits" type="button" value="4"
+                                                    onclick="concatener('4')">
+                                                <input class="button digits" type="button" value="5"
+                                                    onclick="concatener('5')">
+                                                <input class="button digits" type="button" value="6"
+                                                    onclick="concatener('6')">
+                                                <input class="button mathButtons" type="button" value="-"
+                                                    onclick="concatener(' - ')">
+                                                <br>
+                                                <input class="button digits" type="button" value="1"
+                                                    onclick="concatener('1')">
+                                                <input class="button digits" type="button" value="2"
+                                                    onclick="concatener('2')">
+                                                <input class="button digits" type="button" value="3"
+                                                    onclick="concatener('3')">
+                                                <input class="button mathButtons" type="button" value="x"
+                                                    onclick="concatener(' * ')">
+                                                <br>
+                                                <input id="clearButton" class="button" type="button" value="C"
+                                                    onclick="calculator.display.value = ''">
+                                                <input class="button digits" type="button" value="0"
+                                                    onclick="concatener('0')">
+                                                <input class="button mathButtons" type="button" value="="
+                                                    onclick="calculer()">
+                                                <input class="button mathButtons" type="button" value="/"
+                                                    onclick="concatener(' / ')">
+                                            </form>
+                                        </fieldset>
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12">
+                                        <div class="social-share-inner-left">
+                                            <span class="title">find me</span>
+                                            <ul class="social-share d-flex liststyle">
+                                                <li class="facebook"><a href="https://www.facebook.com/khaalyl2"><i
+                                                            data-feather="facebook"></i></a>
+                                                </li>
+                                                <li class="github"><a href="https://github.com/khaalyl"><i
+                                                            data-feather="github"></i></a>
+                                                </li>
+                                                <li class="linkedin"><a href="https:/www.linkedin.com/in/khaalyl"><i
+                                                            data-feather="linkedin"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12 mt_mobile--30">
+                                        <div class="skill-share-inner">
+                                            <span class="title">best skill on</span>
+                                            <ul class="skill-share d-flex liststyle">
+                                                <li><img src="../images/icons/python.png" alt="Icons Images"></li>
+                                                <li><img src="../images/icons/wordpress.png" alt="Icons Images"></li>
+
+                                                <li><img src="../images/icons/photoshop.png" alt="Icons Images"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-2 order-lg-2 col-lg-5">
+                            <p style="padding-top: 20px;">
+                                <h5 style="color: var(--color-primary);">HTML Structure:</h5>
+                                <ul>
+                                    <li><strong>Calculator Form:</strong> The calculator encapsulates the entire calculator interface. It contains a display field (input id="display" type="text") to show inputs and calculation results.</li>
+                                    <li><strong>Number and Operator Buttons:</strong> The buttons are arranged in a grid to mimic a physical calculator. They include:</li>
+                                  
+                                </ul>
+                            
+                                <h5 style="color: var(--color-primary);">JavaScript Functions:</h5>
+                                <ul>
+                                    <li><strong>concatener(chiffre) Function:</strong> This function adds the clicked digits or operators to the string displayed on the screen.</li>
+                                    <li><strong>Calculation Functions (addition, subtraction, multiplication, division):</strong> These functions perform basic mathematical operations:</li>
+                                    <ul>
+                                        <li><strong><code>addition()</code>:</strong> Adds two numbers.</li>
+                                        <li><strong><code>soustraction()</code>:</strong> Subtracts the second number from the first.</li>
+                                        <li><strong><code>multiplication()</code>:</strong> Multiplies two numbers.</li>
+                                        <li><strong><code>division()</code>:</strong> Divides the first number by the second, with a check to prevent division by zero.</li>
+                                    </ul>
+                                    <li><strong>calculer() Function:</strong> Responsible for evaluating the complete expression:</li>
+                                    <ul>
+                                        <li>Retrieves the displayed expression as a string.</li>
+                                        <li>Splits the expression into a list of numbers and operators using the split() method.</li>
+                                        <li>Iterates through the list, applies each operator in sequence, and updates the result.</li>
+                                        <li>Displays the final result in the display field.</li>
+                                    </ul>
+                                </ul>
+                            
+            
+                            </p>
+                            
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Slider Area -->
+
+
+
+
+    </main>
+
+
+
+    <!-- JS ============================================ -->
+    <script>
+        function concatener(chiffre) {
+            document.calculator.display.value += chiffre;
+        }
+        function addition(a, b) {
+            return a + b;
+        }
+
+        function soustraction(a, b) {
+            return a - b;
+        }
+
+        function multiplication(a, b) {
+            return a * b;
+        }
+
+        function division(a, b) {
+            if (b == 0) {
+                alert("Division par zéro impossible !");
+                return 0;
+            }
+            return a / b;
+        }
+
+        function calculer() {
+                let expression = document.calculator.display.value;
+
+                let list = expression.split(' ');
+                let result = parseFloat(list[0]);
+
+                for (let i = 1; i < list.length; i += 2) {
+                    let operator = list[i];
+                    let nextNumber = parseFloat(list[i + 1]);
+
+                    switch (operator) {
+                        case '+':
+                            result = addition(result, nextNumber);
+                            break;
+                        case '-':
+                            result = soustraction(result, nextNumber);
+                            break;
+                        case '*':
+                            result = multiplication(result, nextNumber);
+                            break;
+                        case '/':
+                            result = division(result, nextNumber);
+                            break;
+                    }
+                }
+                document.calculator.display.value = result;
+
+        }
+
+
+
+    </script>
+
+    <script src="../scripts/jquery.js"></script>
+    <script src="../scripts/modernizer.min.js"></script>
+    <script src="../scripts/feather.min.js"></script>
+    <script src="../scripts/slick.min.js"></script>
+    <script src="../scripts/bootstrap.js"></script>
+    <script src="../scripts/text-type.js"></script>
+    <script src="../scripts/wow.js"></script>
+    <script src="../scripts/aos.js"></script>
+    <script src="../scripts/particles.js"></script>
+    <script src="../scripts/jquery-one-page-nav.js"></script>
+    <!-- main JS -->
+    <script src="../scripts/main/main.js"></script>
+
+</body>
+
+</html>
