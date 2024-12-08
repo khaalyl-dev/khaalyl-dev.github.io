@@ -13,6 +13,7 @@
 
     /* From Uiverse.io by alexroumi */
     button {
+      width: 100%;
       padding: 15px 25px;
       border: unset;
       border-radius: 15px;
@@ -71,9 +72,7 @@
       --border-radius: 0.75rem;
       --primary-color: #7257fa;
       --secondary-color: #3c3852;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center center;
+      flex-wrap: flex;
       gap: 15px;
       width: 40%;
       height: 254px;
@@ -81,9 +80,8 @@
       background: #f1f1f3;
       box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
 
-      margin-top: 65vh;
-      align-items: center;
-      padding: 20px;
+      margin-top: 75vh;
+      align-items: top;
 
     }
 
@@ -105,7 +103,6 @@
       justify-content: center;
       align-items: center;
     }
-
 
 
     #piece1 {
@@ -182,18 +179,16 @@
 
     .grid {
       display: grid;
+      width: 100%`;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       gap: 10px;
     }
 
     .grid-item {
-      color: white;
       padding: 20px;
-      text-align: center;
+      text-align: right;
       border-radius: 5px;
-      justify-content: center center;
-      align-items: center;
 
     }
   </style>
@@ -214,7 +209,7 @@
     <div class="container">
       <div class="item puzzle-piece-container">
         <div class="grid">
-          <div class="grid-item" style=" grid-column: 1 / 2; grid-row: 1 / 3; margin-right: 200px;">
+          <div class="grid-item" style=" grid-column: 1 / 2; grid-row: 1 / 2; margin-right: 300px;">
 
             <img src="assets/images/image1.png" draggable="true" id="piece1" class="puzzle-piece active">
             <img src="assets/images/image2.png" draggable="true" id="piece2" class="puzzle-piece">
@@ -236,11 +231,12 @@
             <img src="assets/images/image18.png" draggable="true" id="piece18" class="puzzle-piece">
           </div>
 
-          <div class="grid-item" style=""> <button onclick="nextPuzzlePiece()"> Puzzle suivante
-            </button></div>
-          <div class="grid-item" style=""> <button onclick="hint()"> indice
-            </button>
-          </div>
+          <div class="grid-item" > <button onclick="nextPuzzlePiece()"> Puzzle suivante
+            </button> <br> <br>
+            <button id="hintButton" disabled onclick="hint()">indice :  <div class="countdown-container">
+              <span id="countdown">10:00</span>
+            </div></button>
+           
         </div>
 
 
@@ -310,7 +306,29 @@
 
       }
     }
-    function hint() {
+    let countdownDuration = 600; // 10 minutes in seconds
+
+// Update the countdown every second
+const countdownInterval = setInterval(() => {
+  const minutes = Math.floor(countdownDuration / 60);
+  const seconds = countdownDuration % 60;
+
+  // Update the countdown display
+  document.getElementById('countdown').textContent =
+    `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+  // Decrement the timer
+  countdownDuration--;
+
+  // When the countdown ends
+  if (countdownDuration < 0) {
+    clearInterval(countdownInterval); // Stop the interval
+    document.getElementById('hintButton').disabled = false; // Enable the button
+    document.getElementById('countdown').textContent = "00:00"; // Show "00:00"
+  }
+}, 1000);
+
+function hint() {
   // Get the body element
   const body = document.body;
 
