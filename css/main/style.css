@@ -38,17 +38,17 @@
 ----------------------------*/
 /* Default  */
 .liked {
-  background: linear-gradient(145deg, #ff014f, #d11414);  /* Red gradient when liked */
-  color: white; /* Ensure the text stands out against the background */
+  background: linear-gradient(145deg, #3B5997, #2d4373);
+  color: white;
 }
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 :root {
-  --color-primary: #ff014f;
+  --color-primary: #3B5997;
   --color-secondary: #f4f5f6;
   --color-tertiary: #0d1013;
   --color-gray: #f6f6f6;
-  --color-subtitle: #f9004d;
+  --color-subtitle: #3B5997;
   --background-color-1: linear-gradient(145deg, #1e2024, #23272b);
   --background-color-2: #212428;
   --shadow-1: 10px 10px 19px #1c1e22,
@@ -57,7 +57,8 @@
   --inner-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
   --shadow-white-3: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
   --gradient-box-w: linear-gradient(145deg, #e2e8ec, #ffffff);
-  --gradient-red-hover: linear-gradient(145deg, #ff014f, #d11414);
+  --gradient-red-hover: linear-gradient(145deg, #3B5997, #2d4373);
+  --gradient-primary-hover: linear-gradient(145deg, #3B5997, #2d4373);
   --color-heading: #ffffff;
   --color-heading-wv: #1e2125;
   --color-body: #878e99;
@@ -7844,7 +7845,7 @@ textarea:-ms-input-placeholder {
 }
 .social-share-style-1 .social-share li a.only-border {
   background: transparent;
-  border: 1px solid rgba(255, 1, 79, 0.5294117647);
+  border: 1px solid rgba(59, 89, 151, 0.53);
 }
 .social-share-style-1 .social-share li a.only-border::before {
   display: none;
@@ -11352,7 +11353,7 @@ body.template-color-1 {
   height: 20px;
   width: 20px;
   margin-right: 10px;
-  color: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  color: linear-gradient(-45deg, #3B5997, #5b8fd9, #2d4373, #1BA2DB);
   top: -3px;
   position: relative;
 }
@@ -11778,7 +11779,7 @@ body.template-color-1 {
   font-size: 14px;
   top: 15px;
   right: 15px;
-  background: linear-gradient(to right, #6a67ce, #fc636b) !important;
+  background: linear-gradient(to right, #3B5997, #2d4373) !important;
   color: var(--color-white);
   transition: 0.3s;
 }
@@ -11796,7 +11797,7 @@ body.template-color-1 {
   font-size: 14px;
   top: 15px;
   right: 15px;
-  background: linear-gradient(to right, #6a67ce, #fc636b) !important;
+  background: linear-gradient(to right, #3B5997, #2d4373) !important;
   color: var(--color-white);
   transition: 0.3s;
 }
@@ -12557,7 +12558,7 @@ figcaption {
 }
 
 .section-title span.subtitle {
-  color: #ff014f;
+  color: #3B5997;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 14px;
@@ -12724,7 +12725,7 @@ figcaption {
   }
 }
 .slide .content .inner .title span {
-  color: #ff014f;
+  color: #3B5997;
 }
 .slide .content .inner .title .header-caption span {
   color: var(--color-white);
@@ -12935,7 +12936,7 @@ figcaption {
   height: 100%;
   bottom: 0;
   transform: translateX(-50%);
-  background: linear-gradient(to right, #6a67ce, #fc636b) !important;
+  background: linear-gradient(to right, #3B5997, #2d4373) !important;
 }
 .slide .thumbnail.box-gradient .inner {
   padding: 15px;
@@ -13349,7 +13350,7 @@ figcaption {
   }
 }
 .banner-details-wrapper-sticky .banner-title-area .title span {
-  color: #ff014f;
+  color: #3B5997;
 }
 @media only screen and (max-width: 575px) {
   .banner-details-wrapper-sticky .banner-title-area .title span {
@@ -13491,7 +13492,7 @@ figcaption {
 .slider-style-5 .thumbnail.gradient-border img {
   border: none;
   background-size: 400% 400%;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #3B5997, #5b8fd9, #2d4373, #1BA2DB);
 }
 .slider-style-5 .thumbnail.gradient-animation img {
   animation: gradient 3s ease infinite;
@@ -14414,7 +14415,7 @@ div#featured-project-carousel {
   }
 }
 .rn-nav-list .nav-item .nav-link:hover, .rn-nav-list .nav-item .nav-link.active {
-  color: #ff014f;
+  color: #3B5997;
   background-color: transparent;
   border-color: transparent;
   border: 0 none;
@@ -18270,9 +18271,9 @@ Rn Slick Dots Style
 
 .box-wrapper {
   margin: 25px;
-  background: #ee0979;
-  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
-  background: linear-gradient(to right, #6a67ce, #fc636b) !important;
+  background: #3B5997;
+  background: -webkit-linear-gradient(to right, #3B5997, #2d4373);
+  background: linear-gradient(to right, #3B5997, #2d4373) !important;
   position: relative;
 }
 @media only screen and (max-width: 767px) {

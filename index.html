@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Khalil Ben Anane</title>
     <meta name="robots" content="noindex, follow" />
-    <meta name="description" content="">
+    <meta name="description" content="Portfolio of Khalil Ben Anane — Web Developer, Data Analyst, and Designer. Projects include CSR Insight, Adminix, Keypass CLI, and more on GitHub.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
@@ -19,6 +19,138 @@
     <link rel="stylesheet" href="css/feature.css">
     <!-- Style css -->
     <link rel="stylesheet" href="css/main/style.css">
+    <style>
+        .github-repo-thumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        .github-repo-thumb .lang-label {
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .github-repo-thumb img.lang-icon {
+            width: 56px;
+            height: 56px;
+        }
+        .rn-portfolio .thumbnail img.project-screenshot {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+        }
+        .personal-experience-inner .experience-list .resume-single-list .inner .heading {
+            flex-wrap: nowrap;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .personal-experience-inner .experience-list .resume-single-list .inner .heading .title {
+            flex: 1;
+            min-width: 0;
+            margin-bottom: 0;
+        }
+        .personal-experience-inner .experience-list .resume-single-list .inner .heading .date-of-time {
+            flex-shrink: 0;
+            margin-left: auto;
+        }
+        .personal-experience-inner .experience-list .resume-single-list .inner .heading .date-of-time span {
+            white-space: nowrap;
+        }
+        @media only screen and (min-width: 992px) and (max-width: 1199px),
+        only screen and (max-width: 767px) {
+            .personal-experience-inner .experience-list .resume-single-list .inner .heading {
+                display: flex;
+            }
+        }
+        /* Match .white-version .rn-header .header-center .primary-menu li a */
+        .white-version .rn-header .header-left .logo a {
+            color: var(--color-tertiary) !important;
+            opacity: 1 !important;
+            font-size: 13px;
+            font-weight: var(--s-regular, 400);
+            text-transform: uppercase;
+            font-family: var(--font-secondary);
+            text-decoration: none;
+            white-space: nowrap;
+            transition: var(--transition, 0.3s);
+            margin: 0;
+            padding: 0;
+            border: none;
+            background: transparent !important;
+        }
+        .white-version .rn-header.header--sticky.sticky .header-left .logo a {
+            opacity: 0.8 !important;
+        }
+        /* Mini Projects: same card + image size as WordPress tab */
+        #clients .client-card {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 0 !important;
+            margin-top: -30px !important;
+        }
+        #clients .client-card .main-content {
+            flex-basis: auto !important;
+            width: auto !important;
+            max-width: none !important;
+            padding: 0 !important;
+            margin-top: 30px;
+            min-width: 0;
+        }
+        #clients .client-card .main-content .inner {
+            width: 100%;
+        }
+        #clients .client-card .main-content .thumbnail {
+            height: 200px !important;
+            min-height: 200px !important;
+            max-height: 200px !important;
+            padding: 12px !important;
+            overflow: hidden !important;
+            display: block !important;
+            align-items: stretch !important;
+            justify-content: stretch !important;
+        }
+        #clients .client-card .main-content .thumbnail a {
+            width: 100% !important;
+            height: 100% !important;
+            display: block !important;
+        }
+        #clients .client-card .main-content .thumbnail a img {
+            width: 100% !important;
+            height: 100% !important;
+            max-height: none !important;
+            min-height: 100% !important;
+            object-fit: cover !important;
+            object-position: top center !important;
+            display: block !important;
+            border-radius: 6px;
+        }
+        @media only screen and (max-width: 767px) {
+            #clients .client-card {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media only screen and (max-width: 479px) {
+            #clients .client-card {
+                grid-template-columns: 1fr;
+            }
+            #clients .client-card > .main-content:only-child {
+                grid-column: auto;
+            }
+        }
+        /* Center single-project tabs (Java, Python) — same card width as WordPress */
+        @media only screen and (min-width: 480px) {
+            #clients .client-card > .main-content:only-child {
+                grid-column: 2;
+            }
+        }
+    </style>
 </head>
 
 <body class="template-color-1 spybody white-version" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
@@ -30,9 +162,7 @@
             <div class="col-lg-2 col-6">
                 <div class="header-left">
                     <div class="logo">
-                        <a href="index.html">
-                            <img src="images/logo/logo-dark.png" alt="logo">
-                        </a>
+                        <a href="#home">Khalil Ben Anane</a>
                     </div>
                 </div>
             </div>
@@ -46,16 +176,16 @@
                             <li class="nav-item current"><a class="nav-link" href="#home">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
                             <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#github-projects">GitHub</a></li>
                             <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
                             <li class="nav-item"><a class="nav-link" href="#clients">Mini Projects</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#blog">blog</a></li>
                             <li class="nav-item"><a class="nav-link" href="#contacts">Contact</a></li>
                         </ul>
                         <!-- End Mainmanu Nav -->
                     </nav>
                     <!-- Start Header Right  -->
                     <div class="header-right">
-                        <a class="rn-btn" target="_blank" href="https://github.com/khaalyl"><span>Github</span></a>
+                        <a class="rn-btn" target="_blank" href="https://github.com/khaalyl-dev"><span>Github</span></a>
                         <div class="hamberger-menu d-block d-xl-none">
                             <i id="menuBtn" class="feather-menu humberger-menu" data-feather="align-justify" style="padding-right: 100px; width: 150%;"></i>
                         </div>
@@ -78,9 +208,6 @@
         <div class="inner">
             <div class="menu-top">
                 <div class="menu-header">
-                    <a class="logo" href="index.html"> 
-                        <img src="images/logo/logos-circle.png" alt="Personal Portfolio">
-                    </a>
                     <div class="close-button">
                         <button class="close-menu-activation close"><i data-feather="x"></i></button>
                     </div>
@@ -92,9 +219,9 @@
                     <li class="nav-item current"><a class="nav-link smoth-animation active" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#features">Features</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link smoth-animation" href="#github-projects">GitHub</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#resume">Resume</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#clients">Mini Projects</a></li>
-                    <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">blog</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#contacts">Contact</a></li>
                 </ul>
                 <!-- social sharea area -->
@@ -107,7 +234,7 @@
                                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                                 </svg></a>
                         </li>
-                        <li class="github"><a href="https://github.com/khaalyl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        <li class="github"><a href="https://github.com/khaalyl-dev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
                                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -115,7 +242,7 @@
                                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                                 </svg></a>
                         </li>
-                        <li class="linkedin"><a href="https:/www.linkedin.com/in/khaalyl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        <li class="linkedin"><a href="https://www.linkedin.com/in/khaalyl"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
                                     <path
@@ -164,7 +291,7 @@
                                     </h1>
 
                                     <div>
-                                        <p class="description">Web Developer and Designer with a Big Data background, studying at ISIMS. Skilled in creating responsive websites, intuitive interfaces, and leveraging data analytics to optimize web performance. Passionate about blending design creativity with data-driven insights to deliver impactful digital solutions</p>
+                                        <p class="description">Computer Science student at ISIMS (Big Data), with hands-on experience in web development, business intelligence, and data-driven solutions. Skilled in Angular, React, Python, Power BI, and modern full-stack tools — passionate about building impactful digital products.</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -174,9 +301,9 @@
                                             <ul class="social-share d-flex liststyle">
                                                 <li class="facebook"><a href="https://www.facebook.com/khaalyl2"><i data-feather="facebook"></i></a>
                                                 </li>
-                                                <li class="github"><a href="https://github.com/khaalyl"><i data-feather="github"></i></a>
+                                                <li class="github"><a href="https://github.com/khaalyl-dev"><i data-feather="github"></i></a>
                                                 </li>
-                                                <li class="linkedin"><a href="https:/www.linkedin.com/in/khaalyl"><i data-feather="linkedin"></i></a>
+                                                <li class="linkedin"><a href="https://www.linkedin.com/in/khaalyl"><i data-feather="linkedin"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -332,8 +459,96 @@
                 </div>
 
                 <div class="row row--25 mt--10 mt_md--10 mt_sm--10">
-                    <!-- Start Single Portfolio -->
+                    <!-- COFICAB CSR Dashboard -->
                     <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#coficab-csr">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="javascript:void(0)">
+                                        <img class="project-screenshot" src="images/projects/coficab-csr-dashboard.png" alt="COFICAB CSR Performance Dashboard">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="javascript:void(0)">Power BI</a>
+                                        </div>
+                                        <div class="meta"><span>Dashboard · BI</span></div>
+                                    </div>
+                                    <h4 class="title"><a href="javascript:void(0)">COFICAB — CSR Performance Dashboard</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AdminiX Dashboard -->
+                    <div data-aos="fade-up" data-aos-delay="200" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#adminix-dashboard">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="javascript:void(0)">
+                                        <img class="project-screenshot" src="images/projects/adminix-dashboard.png" alt="AdminiX project management dashboard">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="javascript:void(0)">React</a>
+                                        </div>
+                                        <div class="meta"><span>TypeScript · MongoDB</span></div>
+                                    </div>
+                                    <h4 class="title"><a href="javascript:void(0)">AdminiX — Project management dashboard</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ChatZone -->
+                    <div data-aos="fade-up" data-aos-delay="250" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#chatzone-app">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="javascript:void(0)">
+                                        <img class="project-screenshot" src="images/projects/chatzone.png" alt="ChatZone mobile chat application">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="javascript:void(0)">Java</a>
+                                        </div>
+                                        <div class="meta"><span>Mobile · LAN Chat</span></div>
+                                    </div>
+                                    <h4 class="title"><a href="javascript:void(0)">ChatZone — Offline LAN messaging app</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Keypass CLI -->
+                    <div data-aos="fade-up" data-aos-delay="275" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#keypass-cli">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="javascript:void(0)">
+                                        <img class="project-screenshot" src="images/projects/keypass-cli.png" alt="Keypass secure CLI">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="javascript:void(0)">Python</a>
+                                        </div>
+                                        <div class="meta"><span>CLI · MongoDB</span></div>
+                                    </div>
+                                    <h4 class="title"><a href="javascript:void(0)">Keypass — Encrypted credential storage CLI</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Start Single Portfolio -->
+                    <div data-aos="fade-up" data-aos-delay="300" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
                         <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#elite-communications">
                             <div class="inner">
                                 <div class="thumbnail">
@@ -359,7 +574,7 @@
                     <!-- End Single Portfolio -->
 
                     <!-- Start Single Portfolio -->
-                    <div data-aos="fade-up" data-aos-delay="300" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                    <div data-aos="fade-up" data-aos-delay="400" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
                         <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#pacte">
                             <div class="inner">
                                 <div class="thumbnail">
@@ -379,6 +594,29 @@
                                         </div>
                                     </div>
                                     <h4 class="title"><a href="javascript:void(0)">Pacte – Climate Change Adaptation Program for Vulnerable Regions in Tunisia</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Portfolio -->
+
+                    <!-- Kais Ben Farhat -->
+                    <div data-aos="fade-up" data-aos-delay="450" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#kais-ben-farhat">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="javascript:void(0)">
+                                        <img class="project-screenshot" src="images/projects/kais-ben-farhat.png" alt="Kais Ben Farhat photographer portfolio">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="javascript:void(0)">WordPress</a>
+                                        </div>
+                                        <div class="meta"><span>Photography · Portfolio</span></div>
+                                    </div>
+                                    <h4 class="title"><a href="javascript:void(0)">Kais Ben Farhat — Photographer portfolio website</a></h4>
                                 </div>
                             </div>
                         </div>
@@ -416,13 +654,125 @@
         </div>
         <!-- End portfolio Area -->
 
+        <!-- Start GitHub Projects Area -->
+        <div class="rn-portfolio-area rn-section-gap section-separator" id="github-projects">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center">
+                            <span class="subtitle">Open source &amp; personal builds</span>
+                            <h2 class="title">GitHub Projects</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row--25 mt--10 mt_md--10 mt_sm--10">
+                    <!-- Csr_Insight -->
+                    <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-portfolio">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="https://github.com/khaalyl-dev/Csr_Insight" target="_blank" rel="noopener noreferrer">
+                                        <img class="project-screenshot" src="images/projects/coficab-csr-dashboard.png" alt="Csr Insight dashboard">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="https://github.com/khaalyl-dev/Csr_Insight" target="_blank" rel="noopener noreferrer">TypeScript</a>
+                                        </div>
+                                        <div class="meta"><span>Angular · CSR</span></div>
+                                    </div>
+                                    <h4 class="title"><a href="https://github.com/khaalyl-dev/Csr_Insight" target="_blank" rel="noopener noreferrer">Csr Insight — CSR planning &amp; reporting platform</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- adminix-project -->
+                    <div data-aos="fade-up" data-aos-delay="200" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-portfolio">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="https://github.com/khaalyl-dev/adminix-project" target="_blank" rel="noopener noreferrer">
+                                        <img class="project-screenshot" src="images/projects/adminix-dashboard.png" alt="AdminiX dashboard">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="https://github.com/khaalyl-dev/adminix-project" target="_blank" rel="noopener noreferrer">TypeScript</a>
+                                        </div>
+                                        <div class="meta"><span>Web App</span></div>
+                                    </div>
+                                    <h4 class="title"><a href="https://github.com/khaalyl-dev/adminix-project" target="_blank" rel="noopener noreferrer">Adminix — Admin dashboard &amp; management system</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- keypass-secure-cli -->
+                    <div data-aos="fade-up" data-aos-delay="300" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-portfolio">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="https://github.com/khaalyl-dev/keypass-secure-cli" target="_blank" rel="noopener noreferrer">
+                                        <img class="project-screenshot" src="images/projects/keypass-cli.png" alt="Keypass CLI help menu">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="https://github.com/khaalyl-dev/keypass-secure-cli" target="_blank" rel="noopener noreferrer">Python</a>
+                                        </div>
+                                        <div class="meta"><span>CLI · MongoDB</span></div>
+                                    </div>
+                                    <h4 class="title"><a href="https://github.com/khaalyl-dev/keypass-secure-cli" target="_blank" rel="noopener noreferrer">Keypass — Encrypted credential storage CLI</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ChatZone -->
+                    <div data-aos="fade-up" data-aos-delay="400" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-portfolio">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="https://github.com/khaalyl-dev/ChatZone" target="_blank" rel="noopener noreferrer">
+                                        <img class="project-screenshot" src="images/projects/chatzone.png" alt="ChatZone app screenshots">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="https://github.com/khaalyl-dev/ChatZone" target="_blank" rel="noopener noreferrer">Java</a>
+                                        </div>
+                                        <div class="meta"><span>Mobile · LAN</span></div>
+                                    </div>
+                                    <h4 class="title"><a href="https://github.com/khaalyl-dev/ChatZone" target="_blank" rel="noopener noreferrer">ChatZone — Offline LAN messaging app</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row mt--30">
+                    <div class="col-lg-12 text-center">
+                        <a class="rn-btn" target="_blank" rel="noopener noreferrer" href="https://github.com/khaalyl-dev"><span>View all on GitHub</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End GitHub Projects Area -->
+
         <!-- Start Resume Area -->
         <div class="rn-resume-area rn-section-gap section-separator" id="resume">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title text-center">
-                            <span class="subtitle">1+ Years of Experience</span>
+                            <span class="subtitle">2+ Years of Experience</span>
                             <h2 class="title">My Resume</h2>
                         </div>
                     </div>
@@ -451,104 +801,115 @@
                             <div class="tab-pane show active fade single-tab-area" id="education" role="tabpanel" aria-labelledby="education-tab">
                                 <div class="personal-experience-inner mt--40">
                                     <div class="row">
-                                        <!-- Start Skill List Area  -->
                                         <div class="col-lg-6 col-md-12 col-12">
                                             <div class="content">
-                                                <span class="subtitle">2016 - Now</span>
-                                                <h4 class="maintitle">Education Quality</h4>
+                                                <span class="subtitle">2016 – Present</span>
+                                                <h4 class="maintitle">Formal Education</h4>
                                                 <div class="experience-list">
 
-                                                    <!-- Start Single List  -->
                                                     <div class="resume-single-list">
                                                         <div class="inner">
                                                             <div class="heading">
                                                                 <div class="title">
-                                                                    <h4>High school diploma in Computer Science</h4>
-                                                                    <span>Hrairia High school (2016 - 2020)</span>
+                                                                    <h4>Bachelor's in Computer Science — Big Data</h4>
+                                                                    <span>Higher Institute of Computer Science and Multimedia of Sfax (ISIMS) · Sfax</span>
                                                                 </div>
                                                                 <div class="date-of-time">
-                                                                    <span>3.80/5</span>
+                                                                    <span>2023-2026</span>
                                                                 </div>
                                                             </div>
-                                                            <p class="description">Focusing on foundational computer science knowledge, including programming, algorithms, and systems analysis. It laid the groundwork for further studies in the field of technology and computing..</p>
+                                                            <p class="description">Undergraduate program specializing in Big Data, covering software development, data structures, databases, multimedia systems, and advanced analytics to prepare for data-driven engineering roles.</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
 
-                                                    <!-- Start Single List  -->
                                                     <div class="resume-single-list">
                                                         <div class="inner">
                                                             <div class="heading">
                                                                 <div class="title">
-                                                                    <h4>Higher National Diploma in Web Development</h4>
-                                                                    <span>Ministry of Professional Training and Employment
-                                                                        (2021 - 2022)</span>
+                                                                    <h4>Vocational Competency Certificate — Web Development</h4>
+                                                                    <span>Ministry of Vocational Training and Employment · Tunisia</span>
                                                                 </div>
                                                                 <div class="date-of-time">
-                                                                    <span>4.00/5</span>
+                                                                    <span>Certified</span>
                                                                 </div>
                                                             </div>
-                                                            <p class="description">A six months technical program specializing in web development, where students learn the skills necessary to design and develop websites. The curriculum covers programming languages, front-end and back-end technologies, and web design principles..</p>
+                                                            <p class="description">Professional certification in web development covering front-end and back-end technologies, modern frameworks, and production-ready website design principles.</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
 
-                                                  
+                                                    <div class="resume-single-list">
+                                                        <div class="inner">
+                                                            <div class="heading">
+                                                                <div class="title">
+                                                                    <h4>Baccalaureate — Computer Science</h4>
+                                                                    <span>Hrairia 1 High School · Tunis</span>
+                                                                </div>
+                                                                <div class="date-of-time">
+                                                                    <span>2016-2020</span>
+                                                                </div>
+                                                            </div>
+                                                            <p class="description">Secondary education focused on computer science fundamentals: programming, algorithms, and systems analysis as a foundation for higher studies in technology.</p>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- End Skill List Area  -->
 
-                                        <!-- Start Skill List Area 2nd  -->
                                         <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
                                             <div class="content">
-                                                <span class="subtitle">Live as if you were to die tomorrow. </span>
-                                                <h4 class="maintitle">Learn as if you were live forever.</h4>
+                                                <span class="subtitle">Languages &amp; Communication</span>
+                                                <h4 class="maintitle">Language Skills</h4>
                                                 <div class="experience-list">
 
-                                                    <!-- Start Single List  -->
                                                     <div class="resume-single-list">
                                                         <div class="inner">
                                                             <div class="heading">
                                                                 <div class="title">
-                                                                    <h4>BTS in Digital Marketing</h4>
-                                                                    <span>New Vision
-                                                                        (2022 - 2022)</span>
+                                                                    <h4>IELTS Academic — Overall Band 6.5 (CEFR B2)</h4>
+                                                                    <span>British Council / IDP · Test date: February 2026</span>
                                                                 </div>
                                                                 <div class="date-of-time">
-                                                                    <span>4.70/5</span>
+                                                                    <span>6.5</span>
                                                                 </div>
                                                             </div>
-                                                            <p class="description">A specialized technical program focusing on digital marketing strategies and tools. It includes social media marketing, SEO, content creation, and data analytics to help students understand how to promote businesses in the digital world.</p>
+                                                            <p class="description">Listening 6.5 · Reading 7.0 · Writing 5.5 · Speaking 6.0. Validated academic English proficiency for international study and professional environments.</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
 
-                                                    <!-- Start Single List  -->
                                                     <div class="resume-single-list">
                                                         <div class="inner">
                                                             <div class="heading">
                                                                 <div class="title">
-                                                                    <h4>Bachelor's in Computer Science
-                                                                    </h4>
-                                                                    <span>Higher Institute of Computer Science and Multimedia of Sfax
-                                                                        (2023 - 2026)</span>
+                                                                    <h4>Arabic</h4>
+                                                                    <span>Mother tongue</span>
                                                                 </div>
                                                                 <div class="date-of-time">
-                                                                    <span>4.95/5</span>
+                                                                    <span>Native</span>
                                                                 </div>
                                                             </div>
-                                                            <p class="description">A comprehensive undergraduate program that deepens knowledge in computer science, covering subjects such as software development, data structures, database management, and multimedia systems, preparing students for advanced roles in the tech industry.</p>
+                                                            <p class="description">Full professional proficiency in speaking, writing, and understanding.</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
 
-                          
+                                                    <div class="resume-single-list">
+                                                        <div class="inner">
+                                                            <div class="heading">
+                                                                <div class="title">
+                                                                    <h4>French</h4>
+                                                                    <span>Professional working proficiency</span>
+                                                                </div>
+                                                                <div class="date-of-time">
+                                                                    <span>C1</span>
+                                                                </div>
+                                                            </div>
+                                                            <p class="description">Listening &amp; reading C1 · Spoken interaction &amp; production B2 · Writing C1.</p>
+                                                        </div>
+                                                    </div>
 
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- End Skill List Area  -->
                                     </div>
                                 </div>
                             </div>
@@ -628,57 +989,43 @@
                                         <div class="col-lg-6 col-md-6 col-12 mt_sm--60">
                                             <div class="progress-wrapper">
                                                 <div class="content">
-                                                    <span class="subtitle">Features</span>
+                                                    <span class="subtitle">Technical</span>
                                                     <h4 class="maintitle">Development Skill</h4>
-                                                    <!-- Start Single Progress Charts -->
                                                     <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">HTML</h6>
+                                                        <h6 class="heading heading-h6">PYTHON</h6>
                                                         <div class="progress">
                                                             <div class="progress-bar wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay=".3s" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
                                                             class="percent-label">85%</span></div>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single Progress Charts -->
-
-                                                    <!-- Start Single Progress Charts -->
                                                     <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">CSS</h6>
+                                                        <h6 class="heading heading-h6">ANGULAR / REACT</h6>
                                                         <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.6s" data-wow-delay=".4s" role="progressbar" style="width: 80%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
+                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.6s" data-wow-delay=".4s" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
+                                                            class="percent-label">85%</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="progress-charts">
+                                                        <h6 class="heading heading-h6">TYPESCRIPT</h6>
+                                                        <div class="progress">
+                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay=".5s" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span
                                                             class="percent-label">80%</span></div>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single Progress Charts -->
-
-                                                    <!-- Start Single Progress Charts -->
                                                     <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">JAVASCRIPT</h6>
+                                                        <h6 class="heading heading-h6">POWER BI</h6>
                                                         <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay=".5s" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">60%</span></div>
+                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".6s" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span
+                                                            class="percent-label">80%</span></div>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single Progress Charts -->
-
-                                                    <!-- Start Single Progress Charts -->
                                                     <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">WordPress</h6>
+                                                        <h6 class="heading heading-h6">SQL / MONGODB</h6>
                                                         <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".6s" role="progressbar" style="width: 75%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span
+                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay=".7s" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span
                                                             class="percent-label">75%</span></div>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single Progress Charts -->
-
-                                                    <!-- Start Single Progress Charts -->
-                                                    <div class="progress-charts">
-                                                        <h6 class="heading heading-h6">Java</h6>
-                                                        <div class="progress">
-                                                            <div class="progress-bar wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay=".7s" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"><span
-                                                            class="percent-label">65%</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End Single Progress Charts -->
 
                                                 </div>
                                             </div>
@@ -694,97 +1041,85 @@
                             <div class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="experience-tab">
                                 <div class="personal-experience-inner mt--40">
                                     <div class="row">
-                                        <!-- Start Skill List Area  -->
                                         <div class="col-lg-6 col-md-12 col-12">
                                             <div class="content">
-                                                <span class="subtitle">2018 - Now</span>
-                                                <h4 class="maintitle">Job Experience</h4>
+                                                <span class="subtitle">2025 – Present</span>
+                                                <h4 class="maintitle">Internships</h4>
                                                 <div class="experience-list">
 
-                                                    <!-- Start Single List  -->
                                                     <div class="resume-single-list">
                                                         <div class="inner">
                                                             <div class="heading">
                                                                 <div class="title">
-                                                                    <h4>Social Media Manager</h4>
-                                                                    <span>POINT CARRE PUB  (05/2018 - 09/2018)</span>
+                                                                    <h4>Intern — Business Intelligence &amp; Web Development (Power BI)</h4>
+                                                                    <span>COFICAB · Tunis</span>
                                                                 </div>
                                                                 <div class="date-of-time">
+                                                                    <span>02/2026-05/2026</span>
                                                                 </div>
                                                             </div>
-                                                            <p class="description">Managing social media platforms requires a combination of data analysis and digital marketing, which relates to computer science skills in analytics and programming. Social media strategies often rely on understanding algorithms, user behavior, and data visualization.</p>
+                                                            <p class="description">Develop interactive Power BI dashboards and reports for business decision-making. Collect, clean, and transform multi-source data. Design and maintain web applications with Angular, Flask, and FastAPI. Optimize database queries, document processes, and deliver data-driven solutions with cross-functional teams.</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
 
-                                                    <!-- Start Single List  -->
                                                     <div class="resume-single-list">
                                                         <div class="inner">
                                                             <div class="heading">
                                                                 <div class="title">
-                                                                    <h4>Reseller Services</h4>
-                                                                    <span>TOPNET (11/2021 - 04/2022)</span>
+                                                                    <h4>Intern — Web Developer</h4>
+                                                                    <span>DIGIXI · Tunis</span>
                                                                 </div>
                                                                 <div class="date-of-time">
+                                                                    <span>07/2025-08/2025</span>
                                                                 </div>
                                                             </div>
-                                                            <p class="description">In this role, promoting and selling internet products and services, particularly in the areas of networking, telecommunications, and internet technologies. Understanding how networks function and how products like routers, modems, and internet services are configured and maintained requires technical knowledge, which can be enhanced through a computer science background.</p>
+                                                            <p class="description">Built the AdminiX Dashboard with React, TypeScript, and MongoDB, integrating an AI recommendation system (+35% relevance). Optimized UX/UI and automated data updates, reducing loading time by 40%. Implemented modular architecture and data APIs for scalability.</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
-
-         
 
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- End Skill List Area  -->
 
-                                        <!-- Start Skill List Area 2nd  -->
                                         <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
                                             <div class="content">
-                                                <span class="subtitle">You never have the same experience twice.
-                                                </span>
-                                                <h4 class="maintitle">The sky is the limit. </h4>
+                                                <span class="subtitle">2021 – 2023</span>
+                                                <h4 class="maintitle">Professional Roles</h4>
                                                 <div class="experience-list">
 
-                                                    <!-- Start Single List  -->
                                                     <div class="resume-single-list">
                                                         <div class="inner">
                                                             <div class="heading">
                                                                 <div class="title">
                                                                     <h4>Project Coordinator</h4>
-                                                                    <span>Tunisia Plus ONG (05/2022 - 03/2023)</span>
+                                                                    <span>Tunisia Plus · Ben Arous</span>
                                                                 </div>
                                                                 <div class="date-of-time">
+                                                                    <span>05/2022-03/2023</span>
                                                                 </div>
                                                             </div>
-                                                            <p class="description">the role involved managing and breaking down complex tasks, Additionally, working on budget preparation and task assignment involves understanding data and optimizing processes, areas where computer science concepts like data analysis, workflow automation, and resource management can be applied effectively.</p>
+                                                            <p class="description">Managed complex projects while meeting deadlines and objectives. Performed data analysis to improve performance, led strategic planning and resource management, and facilitated multidisciplinary team collaboration.</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
 
-                                                    <!-- Start Single List  -->
                                                     <div class="resume-single-list">
                                                         <div class="inner">
                                                             <div class="heading">
                                                                 <div class="title">
-                                                                    <h4>Founder</h4>
-                                                                    <span>GENEX (2023 - Now) </span>
+                                                                    <h4>Commercial Consultant</h4>
+                                                                    <span>TOPNET · Tunis</span>
                                                                 </div>
                                                                 <div class="date-of-time">
+                                                                    <span>2021-2022</span>
                                                                 </div>
                                                             </div>
-                                                            <p class="description">As the founder of Genex, I lead a digital agency specializing in web development, design, and social media management. We create custom websites, eye-catching designs, and engaging social media strategies to help businesses thrive in a competitive market.</p>
+                                                            <p class="description">Analyzed customer needs and proposed tailored solutions. Used CRM tools (Salesforce) and monitored commercial performance to optimize sales outcomes.</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
-
 
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- End Skill List Area  -->
                                     </div>
                                 </div>
                             </div>
@@ -794,122 +1129,100 @@
                             <div class="tab-pane fade" id="interview" role="tabpanel" aria-labelledby="interview-tab">
                                 <div class="personal-experience-inner mt--40">
                                     <div class="row">
-                                        <!-- Start Skill List Area  -->
                                         <div class="col-lg-6 col-md-12 col-12">
                                             <div class="content">
-                                                <span class="subtitle">2022 - Now</span>
-                                                <h4 class="maintitle">Courses</h4>
+                                                <span class="subtitle">NVIDIA &amp; Language</span>
+                                                <h4 class="maintitle">Certifications &amp; Courses</h4>
                                                 <div class="experience-list">
 
-                                                    <!-- Start Single List  -->
                                                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" class="resume-single-list">
                                                         <div class="inner">
                                                             <div class="heading">
                                                                 <div class="title">
-                                                                    <h4>Applications of AI for Predictive Maintenance
-                                                                    </h4>
-                                                                    <span>Nvidia</span>
+                                                                    <h4>IELTS Academic</h4>
+                                                                    <span>British Council / IDP · CEFR B2</span>
                                                                 </div>
-                                                         
+                                                                <div class="date-of-time">
+                                                                    <span>6.5</span>
+                                                                </div>
                                                             </div>
-                                                            
+                                                            <p class="description">Overall band score 6.5 (February 2026). Listening 6.5, Reading 7.0, Writing 5.5, Speaking 6.0.</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
 
-                                                    <!-- Start Single List  -->
                                                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="resume-single-list">
                                                         <div class="inner">
                                                             <div class="heading">
                                                                 <div class="title">
-                                                                    <h4> Building Transformer-Based Natural Language Processing Applications
-                                                                    </h4>
-                                                                    <span>Nvidia</span>
+                                                                    <h4>Applications of AI for Predictive Maintenance</h4>
+                                                                    <span>NVIDIA</span>
                                                                 </div>
-                                                         
                                                             </div>
-                                                    
+                                                            <p class="description">Software and applications development — AI-driven predictive maintenance systems.</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
 
-                                                    <!-- Start Single List  -->
                                                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="700" data-aos-once="true" class="resume-single-list">
                                                         <div class="inner">
                                                             <div class="heading">
                                                                 <div class="title">
-                                                                    <h4>Building Transformer-Based Natural Language Processing Applications
-                                                                    </h4>
-                                                                    <span>Nvidia</span>
+                                                                    <h4>Building Transformer-Based NLP Applications</h4>
+                                                                    <span>NVIDIA</span>
                                                                 </div>
-                                                                
                                                             </div>
-                                                       
+                                                            <p class="description">Software and applications development — transformer-based natural language processing.</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
 
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- End Skill List Area  -->
 
-                                        <!-- Start Skill List Area 2nd  -->
                                         <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
                                             <div class="content">
-                                                <span class="subtitle">2018 - Now</span>
-                                                <h4 class="maintitle">Volunteering</h4>
+                                                <span class="subtitle">USAID · Nabeul</span>
+                                                <h4 class="maintitle">Professional Training</h4>
                                                 <div class="experience-list">
 
-                                                    <!-- Start Single List  -->
                                                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="resume-single-list">
                                                         <div class="inner">
                                                             <div class="heading">
                                                                 <div class="title">
-                                                                    <h4>Youth Leader</h4>
+                                                                    <h4>Training of Trainers</h4>
                                                                     <span>USAID</span>
                                                                 </div>
-                                                            
                                                             </div>
-                                                            <p class="description">The Youth Leader Project aims to empower young individuals by providing them with leadership skills, training, and opportunities to engage in community-driven initiatives. The project focuses on fostering personal growth, teamwork, and social responsibility, helping youth become influential leaders in their communities.</p>
+                                                            <p class="description">Teacher training with subject specialisation — facilitation and instructional design for community programs.</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
 
-                                                    <!-- Start Single List  -->
                                                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="700" data-aos-once="true" class="resume-single-list">
                                                         <div class="inner">
                                                             <div class="heading">
                                                                 <div class="title">
-                                                                    <h4>Youth Mentor</h4>
+                                                                    <h4>Project Management</h4>
                                                                     <span>USAID</span>
                                                                 </div>
-                                                         
                                                             </div>
-                                                            <p class="description">Youth mentors will contribute to community resilience and stability as they increase critical thinking, coordination, and employability skills and share these capacities with youth in the target communities where they implement trainings and professional events and engage the community.</p>
+                                                            <p class="description">Management and administration — planning, coordination, and delivery of community and development initiatives.</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
 
-                                                    <!-- Start Single List  -->
                                                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="900" data-aos-once="true" class="resume-single-list">
                                                         <div class="inner">
                                                             <div class="heading">
                                                                 <div class="title">
-                                                                    <h4>Youth Mapper</h4>
+                                                                    <h4>Data Analysis</h4>
                                                                     <span>USAID</span>
                                                                 </div>
-                                                             
                                                             </div>
-                                                            <p class="description">Through the Ma3an project, FHI 360 is working to strengthen resilience in 30 Tunisian communities. The project works to engage marginalized youth, identify and reduce community-specific vulnerabilities, and catalyze and harness public- and private-sector resources to create a lasting foundation for social cohesion and resilience.</p>
+                                                            <p class="description">Software and applications development — data collection, processing, analysis, and visualisation for evidence-based decisions.</p>
                                                         </div>
                                                     </div>
-                                                    <!-- End Single List  -->
 
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- End Skill List Area  -->
                                     </div>
                                 </div>
                             </div>
@@ -1068,7 +1381,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title">
-                            <span class="subtitle">Here are some of</span>
+                            <span class="subtitle">Demos, websites &amp; repositories</span>
                             <h2 class="title">Mini Projects</h2>
                         </div>
                     </div>
@@ -1080,34 +1393,20 @@
                             <div class="position-sticky clients-wrapper sticky-top rbt-sticky-top-adjust">
                                 <ul class="nav tab-navigation-button flex-column nav-pills me-3" id="v-pills-tab" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" id="v-pills-settings-tabs" data-bs-toggle="tab" href="#v-pills-settings" role="tab" aria-controls="react" aria-selected="true">HTML CSS JS</a>
+                                        <a class="nav-link active" id="v-pills-settings-tabs" data-bs-toggle="tab" href="#v-pills-settings" role="tab" aria-controls="htmlcssjs" aria-selected="true">HTML CSS JS</a>
                                     </li>
-                                    
                                     <li class="nav-item">
-                                        <a class="nav-link" id="v-pills-wordpress-tab" data-bs-toggle="tab" href="#v-pills-Wordpress" role="tab" aria-controls="wordpress" aria-selected="true">Wordpress</a>
+                                        <a class="nav-link" id="v-pills-typescript-tab" data-bs-toggle="tab" href="#v-pills-typescript" role="tab" aria-controls="typescript" aria-selected="false">TypeScript</a>
                                     </li>
-                                            <!-- Start Single Brand  
-
                                     <li class="nav-item">
-                                        <a class="nav-link" id="v-pills-home-tab" data-bs-toggle="tab" href="#v-pills-Javascript" role="tab" aria-controls="javascript" aria-selected="true">Java</a>
+                                        <a class="nav-link" id="v-pills-home-tab" data-bs-toggle="tab" href="#v-pills-Javascript" role="tab" aria-controls="java" aria-selected="false">Java</a>
                                     </li>
-
-
                                     <li class="nav-item">
-                                        <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="tab" href="#v-pills-Design" role="tab" aria-controls="design" aria-selected="true">Design</a>
+                                        <a class="nav-link" id="v-pills-python-tabs" data-bs-toggle="tab" href="#v-pills-python" role="tab" aria-controls="python" aria-selected="false">Python</a>
                                     </li>
-
-
-
                                     <li class="nav-item">
-                                        <a class="nav-link" id="v-pills-settings-tabs" data-bs-toggle="tab" href="#v-pills-settings" role="tab" aria-controls="react" aria-selected="true">HTML CSS JS</a>
+                                        <a class="nav-link" id="v-pills-wordpress-tab" data-bs-toggle="tab" href="#v-pills-Wordpress" role="tab" aria-controls="wordpress" aria-selected="false">Wordpress</a>
                                     </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="v-pills-python-tabs" data-bs-toggle="tab" href="#v-pills-python" role="tab" aria-controls="python" aria-selected="true">Python</a>
-                                    </li>
-
--->
                                 </ul>
                             </div>
                         </div>
@@ -1119,53 +1418,44 @@
                                 <div class="tab-content" id="v-pills-tabContent">
 
                                     <div class="tab-pane fade" id="v-pills-Javascript" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                                        <div class="client-card">
-
-                                            <!-- Start Single Brand  -->
+                                        <div class="client-card mini-project-grid">
                                             <div class="main-content">
                                                 <div class="inner text-center">
                                                     <div class="thumbnail">
-                                                        <a href="#"><img src="images/mini-projects/brand-01.png" alt="Client-image"></a>
+                                                        <a href="https://github.com/khaalyl-dev/ChatZone" target="_blank" rel="noopener noreferrer"><img src="images/projects/chatzone.png" alt="ChatZone"></a>
                                                     </div>
                                                     <div class="seperator"></div>
-                                                    <div class="client-name"><span><a href="#">Java1</a></span>
-                                                    </div>
+                                                    <div class="client-name"><span><a href="https://github.com/khaalyl-dev/ChatZone" target="_blank" rel="noopener noreferrer">ChatZone</a></span></div>
                                                 </div>
                                             </div>
-                                            <!-- End Single Brand  -->
+                                        </div>
+                                    </div>
 
-                                            <!-- Start Single Brand  -->
+                                    <div class="tab-pane fade" id="v-pills-typescript" role="tabpanel" aria-labelledby="v-pills-typescript-tab">
+                                        <div class="client-card mini-project-grid">
                                             <div class="main-content">
                                                 <div class="inner text-center">
                                                     <div class="thumbnail">
-                                                        <a href="#"><img src="images/mini-projects/brand-02.png" alt="Client-image"></a>
+                                                        <a href="https://github.com/khaalyl-dev/Csr_Insight" target="_blank" rel="noopener noreferrer"><img src="images/projects/coficab-csr-dashboard.png" alt="Csr Insight"></a>
                                                     </div>
                                                     <div class="seperator"></div>
-                                                    <div class="client-name"><span><a href="#">Java2</a></span>
-                                                    </div>
+                                                    <div class="client-name"><span><a href="https://github.com/khaalyl-dev/Csr_Insight" target="_blank" rel="noopener noreferrer">Csr Insight</a></span></div>
                                                 </div>
                                             </div>
-                                            <!-- End Single Brand  -->
-
-                                            <!-- Start Single Brand  -->
                                             <div class="main-content">
                                                 <div class="inner text-center">
                                                     <div class="thumbnail">
-                                                        <a href="#"><img src="images/mini-projects/brand-03.png" alt="Client-image"></a>
+                                                        <a href="https://github.com/khaalyl-dev/adminix-project" target="_blank" rel="noopener noreferrer"><img src="images/projects/adminix-dashboard.png" alt="Adminix"></a>
                                                     </div>
                                                     <div class="seperator"></div>
-                                                    <div class="client-name"><span><a href="#">Java3</a></span>
-                                                    </div>
+                                                    <div class="client-name"><span><a href="https://github.com/khaalyl-dev/adminix-project" target="_blank" rel="noopener noreferrer">Adminix</a></span></div>
                                                 </div>
                                             </div>
-                                            <!-- End Single Brand  -->
-
-
                                         </div>
                                     </div>
 
                                     <div class="tab-pane fade" id="v-pills-Design" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                                        <div class="client-card">
+                                        <div class="client-card mini-project-grid">
 
                                             <!-- Start Single Brand  -->
                                             <div class="main-content">
@@ -1211,7 +1501,7 @@
                                     </div>
 
                                     <div class="tab-pane fade" id="v-pills-Wordpress" role="tabpanel" aria-labelledby="v-pills-wordpress-tab">
-                                        <div class="client-card">
+                                        <div class="client-card mini-project-grid">
 
                                             <!-- Start Single Brand  -->
                                             <div class="main-content">
@@ -1239,25 +1529,22 @@
                                             </div>
                                             <!-- End Single Brand  -->
 
-                                            <!-- Start Single Brand  -->
                                             <div class="main-content">
                                                 <div class="inner text-center">
                                                     <div class="thumbnail">
-                                                        <a href="#"><img src="images/mini-projects/brand-03.png" alt="Client-image"></a>
+                                                        <a href="https://kaisbenfarhat.com/" target="_blank" rel="noopener noreferrer"><img src="images/projects/kais-ben-farhat.png" alt="Kais Ben Farhat"></a>
                                                     </div>
                                                     <div class="seperator"></div>
-                                                    <div class="client-name"><span><a href="#">Coming soon</a></span>
+                                                    <div class="client-name"><span><a href="https://kaisbenfarhat.com/" target="_blank" rel="noopener noreferrer">Kais Ben Farhat</a></span>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- End Single Brand  -->
-
 
                                         </div>
                                     </div>
 
                                     <div class="tab-pane fade show active" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tabs">
-                                        <div class="client-card">
+                                        <div class="client-card mini-project-grid">
 
                                             <!-- Start Single Brand  -->
                                             <div class="main-content">
@@ -1289,10 +1576,10 @@
                                             <div class="main-content">
                                                 <div class="inner text-center">
                                                     <div class="thumbnail">
-                                                        <a href="#"><img src="images/mini-projects/brand-03.png" alt="Client-image"></a>
+                                                        <a href="projects/sdgpuzzle/"><img src="images/mini-projects/brand-03.png" alt="SDG Puzzle"></a>
                                                     </div>
                                                     <div class="seperator"></div>
-                                                    <div class="client-name"><span><a href="#">Coming soon</a></span>
+                                                    <div class="client-name"><span><a href="projects/sdgpuzzle/">SDG Puzzle Game</a></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1302,48 +1589,16 @@
                                     </div>
 
                                     <div class="tab-pane fade" id="v-pills-python" role="tabpanel" aria-labelledby="v-pills-python-tabs">
-                                        <div class="client-card">
-
-                                            <!-- Start Single Brand  -->
+                                        <div class="client-card mini-project-grid">
                                             <div class="main-content">
                                                 <div class="inner text-center">
                                                     <div class="thumbnail">
-                                                        <a href="#"><img src="images/mini-projects/brand-01.png" alt="Client-image"></a>
+                                                        <a href="https://github.com/khaalyl-dev/keypass-secure-cli" target="_blank" rel="noopener noreferrer"><img src="images/projects/keypass-cli.png" alt="Keypass CLI"></a>
                                                     </div>
                                                     <div class="seperator"></div>
-                                                    <div class="client-name"><span><a href="#">Python1</a></span>
-                                                    </div>
+                                                    <div class="client-name"><span><a href="https://github.com/khaalyl-dev/keypass-secure-cli" target="_blank" rel="noopener noreferrer">Keypass Secure CLI</a></span></div>
                                                 </div>
                                             </div>
-                                            <!-- End Single Brand  -->
-
-                                            <!-- Start Single Brand  -->
-                                            <div class="main-content">
-                                                <div class="inner text-center">
-                                                    <div class="thumbnail">
-                                                        <a href="#"><img src="images/mini-projects/brand-02.png" alt="Client-image"></a>
-                                                    </div>
-                                                    <div class="seperator"></div>
-                                                    <div class="client-name"><span><a href="#">Python2</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- End Single Brand  -->
-
-                                            <!-- Start Single Brand  -->
-                                            <div class="main-content">
-                                                <div class="inner text-center">
-                                                    <div class="thumbnail">
-                                                        <a href="#"><img src="images/mini-projects/brand-03.png" alt="Client-image"></a>
-                                                    </div>
-                                                    <div class="seperator"></div>
-                                                    <div class="client-name"><span><a href="#">Python3</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- End Single Brand  -->
-
-
                                         </div>
                                     </div>
 
@@ -1356,99 +1611,6 @@
         </div>
         <!-- End client section -->
 
-        <!-- Start News Area -->
-        <div class="rn-blog-area rn-section-gap section-separator" id="blog">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-center">
-                            <span class="subtitle">Visit my blog and keep your feedback</span>
-                            <h2 class="title">My Blog</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row--25 mt--30 mt_md--10 mt_sm--10">
-
-                    <!-- Start Single blog -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
-                        <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#blog1">
-                            <div class="inner">
-                                <div class="thumbnail">
-                                    <a href="javascript:void(0)">
-                                        <img src="images/blog/blog-01.webp" alt="Personal Portfolio Images">
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <div class="category-info">
-                                        <div class="category-list">
-                                            <a href="javascript:void(0)">Tunis</a>
-                                        </div>
-                                        <div class="meta">
-                                            <span>2 min read</span>
-                                        </div>
-                                    </div>
-                                    <h4 class="title"><a href="javascript:void(0)">Revolutionizing Design: How AI and Machine Learning Are Transforming Photoshop Tools
-                                           </a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single blog -->
-
-                    <!-- Start Single blog -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="150" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
-                        <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#blog2">
-                            <div class="inner">
-                                <div class="thumbnail">
-                                    <a href="javascript:void(0)">
-                                        <img src="images/blog/blog-02.webp" alt="Personal Portfolio Images">
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <div class="category-info">
-                                        <div class="category-list">
-                                            <a href="javascript:void(0)">Tunis</a>
-                                        </div>
-                                        <div class="meta">
-                                            <span>2 hour read</span>
-                                        </div>
-                                    </div>
-                                    <h4 class="title"><a href="javascript:void(0)">Top AI-Enhanced WordPress Plugins You Should Know in 2024</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single blog -->
-
-                    <!-- Start Single blog -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
-                        <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#blog3">
-                            <div class="inner">
-                                <div class="thumbnail">
-                                    <a href="javascript:void(0)">
-                                        <img src="images/blog/blog-03.webp" alt="Personal Portfolio Images">
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <div class="category-info">
-                                        <div class="category-list">
-                                            <a href="javascript:void(0)">Tunis</a>
-                                        </div>
-                                        <div class="meta">
-                                            <span>5 min read</span>
-                                        </div>
-                                    </div>
-                                    <h4 class="title"><a href="javascript:void(0)"> AI vs. Traditional Design: How Machine Learning Tools in Photoshop Compare</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single blog -->
-
-                </div>
-            </div>
-        </div>
-        <!-- ENd Mews Area -->
         <!-- Start Contact section -->
         <div class="rn-contact-area rn-section-gap section-separator" id="contacts">
             <div class="container">
@@ -1481,7 +1643,7 @@
                                 <div class="social-icone">
                                     <a href="https://www.facebook.com/khaalyl2"><i data-feather="facebook"></i></a>
                                     <a href="https://www.linkedin.com/in/khaalyl/"><i data-feather="linkedin"></i></a>
-                                    <a href="https://github.com/khaalyl"><i data-feather="github"></i></a>
+                                    <a href="https://github.com/khaalyl-dev"><i data-feather="github"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1541,6 +1703,150 @@
             </div>
         </div>
         <!-- End Contuct section -->
+
+        <!-- Modal COFICAB CSR Dashboard -->
+        <div class="modal fade" id="coficab-csr" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="portfolio-popup-thumbnail">
+                                    <div class="image">
+                                        <img class="w-100" src="images/projects/coficab-csr-dashboard.png" alt="COFICAB CSR dashboard">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-content">
+                                    <h3><span>Power BI · Angular</span> COFICAB CSR Dashboard</h3>
+                                    <p class="mb--30">Corporate Social Responsibility performance dashboard built during my COFICAB internship. Tracks realized vs planned activities, participants, partners, and KPIs across global sites with interactive filters, charts, and year-over-year comparisons.</p>
+                                    <div class="button-group mt--20">
+                                        <a href="https://github.com/khaalyl-dev/Csr_Insight" target="_blank" rel="noopener noreferrer" class="rn-btn">
+                                            <span>VIEW ON GITHUB</span>
+                                            <i data-feather="chevron-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Keypass CLI -->
+        <div class="modal fade" id="keypass-cli" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="portfolio-popup-thumbnail">
+                                    <div class="image">
+                                        <img class="w-100" src="images/projects/keypass-cli.png" alt="Keypass CLI">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-content">
+                                    <h3><span>Python · Typer</span> Keypass Secure CLI</h3>
+                                    <p class="mb--30">Secure command-line tool for encrypted credential storage with MongoDB and OS keyring integration. Supports init, add/get/delete credentials, master key export/import, backups, and device registration — installable via pip as <code>keypass-secure-cli</code>.</p>
+                                    <div class="button-group mt--20">
+                                        <a href="https://github.com/khaalyl-dev/keypass-secure-cli" target="_blank" rel="noopener noreferrer" class="rn-btn">
+                                            <span>VIEW ON GITHUB</span>
+                                            <i data-feather="chevron-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal ChatZone -->
+        <div class="modal fade" id="chatzone-app" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="portfolio-popup-thumbnail">
+                                    <div class="image">
+                                        <img class="w-100" src="images/projects/chatzone.png" alt="ChatZone mobile app">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-content">
+                                    <h3><span>Java · Mobile</span> ChatZone</h3>
+                                    <p class="mb--30">Local-network chat application that works without internet. Users connect over the same Wi-Fi LAN, log in with a username, and exchange real-time text and image messages through a lightweight client–server setup.</p>
+                                    <div class="button-group mt--20">
+                                        <a href="https://github.com/khaalyl-dev/ChatZone" target="_blank" rel="noopener noreferrer" class="rn-btn">
+                                            <span>VIEW ON GITHUB</span>
+                                            <i data-feather="chevron-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal AdminiX Dashboard -->
+        <div class="modal fade" id="adminix-dashboard" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="portfolio-popup-thumbnail">
+                                    <div class="image">
+                                        <img class="w-100" src="images/projects/adminix-dashboard.png" alt="AdminiX dashboard">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-content">
+                                    <h3><span>React · TypeScript</span> AdminiX</h3>
+                                    <p class="mb--30">Project management dashboard developed at DIGIXI with React, TypeScript, and MongoDB. Features workspaces, task tracking, status and priority filters, team assignment, and real-time project metrics — with a modular architecture and optimized UX.</p>
+                                    <div class="button-group mt--20">
+                                        <a href="https://github.com/khaalyl-dev/adminix-project" target="_blank" rel="noopener noreferrer" class="rn-btn">
+                                            <span>VIEW ON GITHUB</span>
+                                            <i data-feather="chevron-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Modal Portfolio Body area Start -->
         <div class="modal fade" id="elite-communications" tabindex="-1" role="dialog" aria-hidden="true">
@@ -1636,7 +1942,42 @@
             </div>
         </div>
         <!-- End Modal Portfolio area -->
-                    
+
+        <!-- Modal Kais Ben Farhat -->
+        <div class="modal fade" id="kais-ben-farhat" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="portfolio-popup-thumbnail">
+                                    <div class="image">
+                                        <img class="w-100" src="images/projects/kais-ben-farhat.png" alt="Kais Ben Farhat portfolio">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-content">
+                                    <h3><span>WordPress</span> Kais Ben Farhat</h3>
+                                    <p class="mb--30">Photography portfolio website for Tunisian photographer Kais Ben Farhat. Minimal black-and-white layout with sidebar navigation, curated galleries (art, commercial, events), and contact integration — built on WordPress for easy content updates.</p>
+                                    <div class="button-group mt--20">
+                                        <a href="https://kaisbenfarhat.com/" target="_blank" rel="noopener noreferrer" class="rn-btn">
+                                            <span>VIEW PROJECT</span>
+                                            <i data-feather="chevron-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
          <!-- Modal Portfolio Body area Start -->
          <div class="modal fade" id="learntodiscern" tabindex="-1" role="dialog" aria-hidden="true">
@@ -1685,255 +2026,6 @@
             </div>
         </div>
         <!-- End Modal Portfolio area -->
-        <!-- Modal Blog Body area Start -->
-        <div class="modal fade" id="blog1" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-news" role="document">
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i data-feather="x"></i></span>
-                        </button>
-                    </div>
-
-                    <!-- End of .modal-header -->
-
-                    <div class="modal-body">
-                        <img src="images/blog/blog-big-01.webp" alt="news modal" class="img-fluid modal-feat-img">
-                        <div class="news-details">
-                            <span class="date">2 May, 2021</span>
-                            <h2 class="title">Revolutionizing Design: How AI and Machine Learning Are Transforming Photoshop Tools</h2>
-                            <h4>Introduction: A New Era in Digital Design</h4>
-                            <p>Artificial Intelligence (AI) and Machine Learning (ML) are no longer just futuristic buzzwords; they are now reshaping industries, including graphic design. Adobe Photoshop, a cornerstone of digital creativity, has integrated these technologies to enhance workflows and empower designers with unprecedented capabilities.</p>
-                    
-                            <h4>1. AI-Powered Tools in Photoshop: What's New?</h4>
-                            <h6 style="color: black;">Neural Filters</h6>
-                            <p>Neural Filters utilize machine learning to apply complex edits in seconds. Whether it's retouching portraits or changing facial expressions, these filters make tasks that once took hours achievable with a few clicks. Some popular filters include:</p>
-                            <ul>
-                                <li style="color: black;"><strong>Skin Smoothing:</strong> Automatically enhances skin texture while preserving natural details.</li>
-                                <li style="color: black;"><strong>Smart Portrait:</strong> Adjusts facial features, emotions, and even age dynamically.</li>
-                            </ul>
-                    
-                            <h4>2. How AI Enhances Creativity and Efficiency</h4>
-                            <h6 style="color: black;">Automating Repetitive Tasks</h6>
-
-                            <p>AI tools automate mundane processes such as masking, background removal, and color correction, allowing designers to focus on more creative aspects of their projects. This boosts productivity and reduces creative fatigue.</p>
-                    
-                            <h6 style="color: black;">Smart Recommendations</h6>
-
-                            <p>Machine learning algorithms analyze your workflow and suggest the most suitable tools or filters. This feature helps beginners navigate Photoshop's vast capabilities more efficiently.</p>
-                        </div>
-                    
-                    
-
-                        <!-- Comment Section Area Start -->
-                        <div class="comment-inner">
-                            <h3 class="title mb--40 mt--50">Leave a Reply</h3>
-                            <form action="#">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="rnform-group"><input type="text" placeholder="Name">
-                                        </div>
-                                        <div class="rnform-group"><input type="email" placeholder="Email">
-                                        </div>
-                                        <div class="rnform-group"><input type="text" placeholder="Website">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="rnform-group">
-                                            <textarea placeholder="Comment"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <a class="rn-btn" href="#"><span>SUBMIT NOW</span></a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Comment Section End -->
-                    </div>
-                    <!-- End of .modal-body -->
-                </div>
-            </div>
-        </div>
-        <!-- End Modal Blog area -->
-                <!-- Modal Blog Body area Start -->
-        <div class="modal fade" id="blog2" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-news" role="document">
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i data-feather="x"></i></span>
-                        </button>
-                    </div>
-
-                    <!-- End of .modal-header -->
-
-                    <div class="modal-body"> 
-                        <img src="images/blog/blog-big-02.webp" alt="news modal" class="img-fluid modal-feat-img">
-                        <div class="news-details">
-                            <span class="date">2 May, 2024</span>
-                            <h2 class="title">Top AI-Enhanced WordPress Plugins You Should Know in 2024</h2>
-                            <h4>Introduction: The Future of WordPress with AI</h4>
-                            <p>In 2024, Artificial Intelligence (AI) is revolutionizing the way we interact with WordPress. With AI-powered plugins, website owners can automate tasks, improve user experience, and enhance website performance like never before. Let’s dive into some of the top AI-enhanced WordPress plugins that are transforming the platform.</p>
-                    
-                            <h4>1. AI-Powered Content Creation Plugins</h4>
-                            <h6 style="color: black;">ContentBot</h6>
-                            <p>ContentBot is a powerful AI-driven content creation plugin for WordPress that assists in writing blog posts, generating product descriptions, and creating engaging copy. By using machine learning, it helps create high-quality, SEO-friendly content in a fraction of the time it would take manually.</p>
-                            
-                            <ul>
-                                <li style="color: black;"><strong>Customizable Templates:</strong> Choose from various templates tailored to different types of content.</li>
-                                <li style="color: black;"><strong>SEO Optimization:</strong> Built-in SEO analysis ensures your content ranks well on search engines.</li>
-                            </ul>
-                    
-                            <h4>2. AI-Based Image Optimization Plugins</h4>
-                            <h6 style="color: black;">Smush AI</h6>
-                            <p>Smush AI is a game-changer for WordPress sites looking to improve load times. This plugin uses AI to automatically compress and optimize images without sacrificing quality. It’s perfect for sites with lots of high-resolution images and helps ensure fast, seamless performance.</p>
-                    
-                            <ul>
-                                <li style="color: black;"><strong>Bulk Optimization:</strong> Smush AI can optimize hundreds of images in one go, saving time and effort.</li>
-                                <li style="color: black;"><strong>Automatic Compression:</strong> Automatically compress images upon upload to improve site speed.</li>
-                            </ul>
-                    
-                            <h4>3. AI-Driven SEO and Marketing Plugins</h4>
-                            <h6 style="color: black;">Rank Math AI</h6>
-                            <p>Rank Math AI uses machine learning to provide advanced SEO optimization. This plugin analyzes your content and suggests the best keywords, meta descriptions, and other on-page SEO factors, helping you rank higher on search engines.</p>
-                    
-                            <ul>
-                                <li style="color: black;"><strong>AI-Powered Content Analysis:</strong> Get real-time feedback on how to optimize your posts for SEO.</li>
-                                <li style="color: black;"><strong>Advanced Keyword Suggestions:</strong> Machine learning algorithms help suggest keywords that are trending in your niche.</li>
-                            </ul>
-                    
-                            <h4>Conclusion: Why AI Is a Must-Have for WordPress in 2024</h4>
-                            <p>AI-enhanced plugins are no longer a luxury—they’re a necessity for WordPress users who want to stay competitive. These plugins can automate tedious tasks, enhance website performance, and improve overall user experience. As AI continues to evolve, expect even more innovative plugins to be introduced, making 2024 an exciting year for WordPress users.</p>
-                        </div>
-                    
-                    
-                    
-
-                        <!-- Comment Section Area Start -->
-                        <div class="comment-inner">
-                            <h3 class="title mb--40 mt--50">Leave a Reply</h3>
-                            <form action="#">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="rnform-group"><input type="text" placeholder="Name">
-                                        </div>
-                                        <div class="rnform-group"><input type="email" placeholder="Email">
-                                        </div>
-                                        <div class="rnform-group"><input type="text" placeholder="Website">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="rnform-group">
-                                            <textarea placeholder="Comment"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <a class="rn-btn" href="#"><span>SUBMIT NOW</span></a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Comment Section End -->
-                    </div>
-                    <!-- End of .modal-body -->
-                </div>
-            </div>
-        </div>
-        <!-- End Modal Blog area -->
-
-
-           <!-- Modal Blog Body area Start -->
-           <div class="modal fade" id="blog3" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-news" role="document">
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i data-feather="x"></i></span>
-                        </button>
-                    </div>
-
-                    <!-- End of .modal-header -->
-
-                    <div class="modal-body"> 
-                        <img src="images/blog/blog-big-03.webp" alt="news modal" class="img-fluid modal-feat-img">
-                        <div class="news-details">
-                            <span class="date">2 May, 2024</span>
-                            <h2 class="title">AI vs. Traditional Design: How Machine Learning Tools in Photoshop Compare</h2>
-                            <h4>Introduction: The Evolution of Design with AI</h4>
-                            <p>In the world of graphic design, traditional methods have long been the standard. However, with the rise of Artificial Intelligence (AI) and Machine Learning (ML), tools like Adobe Photoshop have undergone a dramatic transformation. In this article, we compare AI-driven tools in Photoshop with traditional design techniques and explore how machine learning is changing the landscape of digital creativity.</p>
-                    
-                            <h4>1. Traditional Design Techniques: The Art of Manual Crafting</h4>
-                            <h6 style="color: black;">The Process</h6>
-                            <p>Traditional design relies heavily on manual processes. Designers carefully adjust each element of an image or layout, often spending hours on tasks like retouching, color grading, and compositing. While this allows for full control and creative freedom, it can be time-consuming and tedious.</p>
-                    
-                            <ul>
-                                <li style="color: black;"><strong>Precision Control:</strong> Designers have total control over every aspect of the design.</li>
-                                <li style="color: black;"><strong>Creative Freedom:</strong> The process allows for unlimited creativity with no constraints.</li>
-                            </ul>
-                    
-                            <h4>2. Machine Learning Tools in Photoshop: Revolutionizing the Workflow</h4>
-                            <h6 style="color: black;">AI-Driven Features</h6>
-                            <p>Machine learning tools in Photoshop, such as Neural Filters and Sensei-powered features, allow designers to achieve complex edits in a fraction of the time. These tools learn from data and improve over time, offering highly efficient solutions to many traditional tasks.</p>
-                    
-                            <ul>
-                                <li style="color: black;"><strong>Speed and Efficiency:</strong> AI can automate repetitive tasks, freeing up time for more creative pursuits.</li>
-                                <li style="color: black;"><strong>Smart Adjustments:</strong> AI tools like Smart Portrait can adjust facial features, expressions, and age, providing dynamic results without manual input.</li>
-                            </ul>
-                    
-                            <h4>3. Comparing Traditional Design vs. AI in Photoshop: Pros and Cons</h4>
-                            <h6 style="color: black;">Pros of Traditional Design</h6>
-                            <p>Traditional design offers unmatched control and creative freedom. Designers can implement their vision exactly as they imagine, experimenting with new techniques and creating unique, high-quality designs. However, the downside is the time and effort required for even basic tasks.</p>
-                    
-                            <h6 style="color: black;">Pros of AI-Driven Design Tools</h6>
-                            <p>AI-driven tools in Photoshop, on the other hand, offer speed and automation. Tasks like background removal, color correction, and retouching can be done in seconds, reducing manual effort and speeding up the overall workflow. While they may not replace the creative intuition of a designer, these tools help boost productivity and reduce repetitive strain.</p>
-                    
-                            <h4>4. The Future of Design: Combining Both Worlds</h4>
-                            <p>Rather than seeing AI as a replacement for traditional design, it should be viewed as a complementary tool. The best results come from combining the creativity of manual techniques with the efficiency and power of AI-driven tools. In the future, designers may lean on AI for time-consuming tasks while focusing on the creative aspects of design.</p>
-                    
-                            <h4>Conclusion: A New Era in Graphic Design</h4>
-                            <p>As AI technology continues to improve, the line between traditional and machine-assisted design will blur even further. By embracing AI tools like those in Photoshop, designers can elevate their work, streamline their workflow, and continue to push the boundaries of creativity.</p>
-                        </div>
-                    
-                    
-                    
-                    
-
-                        <!-- Comment Section Area Start -->
-                        <div class="comment-inner">
-                            <h3 class="title mb--40 mt--50">Leave a Reply</h3>
-                            <form action="#">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="rnform-group"><input type="text" placeholder="Name">
-                                        </div>
-                                        <div class="rnform-group"><input type="email" placeholder="Email">
-                                        </div>
-                                        <div class="rnform-group"><input type="text" placeholder="Website">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="rnform-group">
-                                            <textarea placeholder="Comment"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <a class="rn-btn" href="#"><span>SUBMIT NOW</span></a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Comment Section End -->
-                    </div>
-                    <!-- End of .modal-body -->
-                </div>
-            </div>
-        </div>
-        <!-- End Modal Blog area -->
-
         <!-- Back to  top Start -->
         <div class="backto-top">
             <div>
@@ -1952,7 +2044,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer-area text-center">
-                        <p class="description mt--30">© 2022. All rights reserved by Khalil Ben Anane</p>
+                        <p class="description mt--30">© 2026. All rights reserved by Khalil Ben Anane</p>
                     </div>
                 </div>
             </div>
